@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato — Grupo Solidariedade é Vida</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container barra-nav">
+      <a href="index.html" class="logo"><span class="laco">&#127895;</span> Solidariedade é Vida</a>
+      <button id="btn-menu" aria-label="Abrir menu">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="atividades.html">Atividades</a></li>
+          <li><a href="noticias.html">Notícias e Eventos</a></li>
+          <li><a href="contribua.html">Como Contribuir</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="contato.html" class="ativo">Contato</a></li>
+          <li><a href="admin.html">Área Administrativa</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <h2>Fale Conosco</h2>
+        <p>Envie sua mensagem, dúvida ou proposta de parceria. Todas as mensagens são
+           lidas pela equipe do grupo.</p>
+
+        <form id="form-contato" novalidate>
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="6" required
+                    placeholder="Escreva sua mensagem ou dúvida"></textarea>
+
+          <button type="submit" class="botao">Enviar mensagem</button>
+          <div id="feedback-contato" class="msg-feedback" role="alert"></div>
+        </form>
+
+        <p class="texto-suave" style="margin-top:1.5rem">
+          Seus dados são utilizados apenas para responder à sua mensagem.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

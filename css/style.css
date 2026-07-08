@@ -1,0 +1,323 @@
+:root {
+  --verde-escuro: #1d5c45;
+  --verde-claro:  #e7f2ec;
+  --vermelho:     #c0394b;
+  --texto:        #262b29;
+  --texto-suave:  #5b645f;
+  --fundo:        #ffffff;
+  --fundo-secao:  #f5f7f6;
+  --borda:        #dde4e0;
+  --raio:         10px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+}
+
+/* ---------- Cabeçalho e navegação ---------- */
+
+header {
+  background: var(--verde-escuro);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+}
+
+.barra-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .8rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.logo .laco {
+  color: var(--vermelho);
+  background: #fff;
+  border-radius: 50%;
+  width: 2.1rem;
+  height: 2.1rem;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  display: flex;
+  gap: .3rem;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem .8rem;
+  border-radius: 6px;
+  font-size: .95rem;
+}
+
+nav a:hover,
+nav a:focus-visible { background: rgba(255, 255, 255, .15); }
+
+nav a.ativo {
+  background: #fff;
+  color: var(--verde-escuro);
+  font-weight: 600;
+}
+
+#btn-menu {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 6px;
+  padding: .2rem .6rem;
+  cursor: pointer;
+}
+
+/* ---------- Seção de destaque (hero) ---------- */
+
+.hero {
+  background: linear-gradient(135deg, var(--verde-escuro), #2e7d5f);
+  color: #fff;
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); margin-bottom: .8rem; }
+
+.hero p {
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  opacity: .95;
+}
+
+/* ---------- Botões ---------- */
+
+.botao {
+  display: inline-block;
+  background: var(--vermelho);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: .7rem 1.5rem;
+  border-radius: var(--raio);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: filter .15s;
+}
+
+.botao:hover { filter: brightness(1.1); }
+
+.botao.secundario {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* ---------- Seções ---------- */
+
+section { padding: 3rem 0; }
+
+section:nth-of-type(even) { background: var(--fundo-secao); }
+
+h2 {
+  color: var(--verde-escuro);
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  border-left: 5px solid var(--vermelho);
+  padding-left: .7rem;
+}
+
+h3 { color: var(--verde-escuro); margin-bottom: .5rem; }
+
+p + p { margin-top: .8rem; }
+
+.texto-suave { color: var(--texto-suave); font-size: .9rem; }
+
+/* ---------- Cartões ---------- */
+
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.cartao {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 1.3rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .05);
+}
+
+.cartao .icone { font-size: 1.8rem; margin-bottom: .5rem; }
+
+.cartao .data {
+  color: var(--vermelho);
+  font-size: .85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ---------- Formulários ---------- */
+
+form { max-width: 560px; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin: 1rem 0 .3rem;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: .65rem .8rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  font: inherit;
+  background: #fff;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--verde-escuro);
+  border-color: var(--verde-escuro);
+}
+
+form .botao { margin-top: 1.2rem; }
+
+.msg-feedback {
+  margin-top: 1rem;
+  padding: .8rem 1rem;
+  border-radius: var(--raio);
+  display: none;
+}
+
+.msg-feedback.sucesso { display: block; background: var(--verde-claro); color: var(--verde-escuro); }
+.msg-feedback.erro    { display: block; background: #fdecee; color: var(--vermelho); }
+
+/* ---------- Tabelas (transparência) ---------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+}
+
+th, td {
+  border: 1px solid var(--borda);
+  padding: .6rem .8rem;
+  text-align: left;
+}
+
+th { background: var(--verde-claro); color: var(--verde-escuro); }
+
+/* ---------- Área administrativa ---------- */
+
+.painel-admin { display: none; }
+
+.painel-admin.visivel { display: block; }
+
+.caixa-login {
+  max-width: 400px;
+  margin: 2rem auto;
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 2rem;
+}
+
+.lista-mensagens li {
+  background: #fff;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: .8rem 1rem;
+  margin-bottom: .6rem;
+  list-style: none;
+}
+
+/* ---------- Rodapé ---------- */
+
+footer {
+  background: var(--verde-escuro);
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  font-size: .85rem;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, .15);
+}
+
+body { padding-bottom: 3.2rem; }
+
+.conteudo-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: .6rem 0;
+}
+
+footer a { color: #fff; }
+
+
+/* ---------- Responsividade ---------- */
+
+@media (max-width: 760px) {
+  #btn-menu { display: block; }
+
+  .conteudo-rodape { justify-content: center; text-align: center; }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--verde-escuro);
+    padding: .5rem 4%;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .2);
+  }
+
+  nav ul.aberto { display: flex; }
+
+  nav a { display: block; padding: .8rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
