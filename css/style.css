@@ -101,7 +101,7 @@ nav a.ativo {
   cursor: pointer;
 }
 
-/* ---------- Seção de destaque (hero) ---------- */
+/* ---------- Seção de destaque ---------- */
 
 .hero {
   background: linear-gradient(135deg, var(--verde-escuro), #2e7d5f);
@@ -224,46 +224,7 @@ form .botao { margin-top: 1.2rem; }
 .msg-feedback.sucesso { display: block; background: var(--verde-claro); color: var(--verde-escuro); }
 .msg-feedback.erro    { display: block; background: #fdecee; color: var(--vermelho); }
 
-/* ---------- Tabelas (transparência) ---------- */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1rem;
-  background: #fff;
-}
-
-th, td {
-  border: 1px solid var(--borda);
-  padding: .6rem .8rem;
-  text-align: left;
-}
-
 th { background: var(--verde-claro); color: var(--verde-escuro); }
-
-/* ---------- Área administrativa ---------- */
-
-.painel-admin { display: none; }
-
-.painel-admin.visivel { display: block; }
-
-.caixa-login {
-  max-width: 400px;
-  margin: 2rem auto;
-  background: #fff;
-  border: 1px solid var(--borda);
-  border-radius: var(--raio);
-  padding: 2rem;
-}
-
-.lista-mensagens li {
-  background: #fff;
-  border: 1px solid var(--borda);
-  border-radius: var(--raio);
-  padding: .8rem 1rem;
-  margin-bottom: .6rem;
-  list-style: none;
-}
 
 /* ---------- Rodapé ---------- */
 

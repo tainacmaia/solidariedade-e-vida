@@ -17,16 +17,12 @@ const HTML_CABECALHO = `
       <ul>
         <li><a href="index.html">Início</a></li>
         <li><a href="atividades.html">Atividades</a></li>
-        <li><a href="noticias.html">Notícias e Eventos</a></li>
         <li><a href="contribua.html">Como Contribuir</a></li>
-        <li><a href="transparencia.html">Transparência</a></li>
         <li><a href="contato.html">Contato</a></li>
-        <li><a href="admin.html">Área Administrativa</a></li>
       </ul>
     </nav>
   </div>
 `;
-
 /* ---------- Rodapé (barra fixa e compacta) ---------- */
 
 const HTML_RODAPE = `
